@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+    {% include 'partials/_header.html' %}
+    <div class="container mx-auto px-4 mt-8 min-h-screen text-center">
+        <a href="/add_event" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300">Add New Event</a>
+        <a href="/generate_event_idea" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300 ml-4">Generate Event Idea</a>
+        <div id="events_list" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/delete_event.js') }}"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    {% include 'partials/_footer.html' %}
+</body>
+</html>

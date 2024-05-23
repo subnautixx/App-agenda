@@ -54,7 +54,7 @@ def delete_event():
 def generate_event_idea():
     prompt = "Generate a unique and interesting event idea."
     idea = llm_prompt(prompt, model="gpt-4-1106-preview", temperature=0.7)
-    return idea
+    return jsonify({"idea": idea})
 
 class StandaloneApplication(BaseApplication):
     def __init__(self, app, options=None):
